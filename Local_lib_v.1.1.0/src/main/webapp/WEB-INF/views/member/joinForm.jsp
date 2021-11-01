@@ -268,7 +268,7 @@ td {
 					<tr>
 						<td>
 							E-Mail<br>
-							<input type="text" id="email" name="email" placeholder="Email을 입력해 주세요" size="50">
+							<input type="email" id="email" name="email" placeholder="Email을 입력해 주세요" size="50">
 							<button type="button" id="emailChkBtn" class="btn-primary btn-warning font-color-white" >E-mail 체크</button>
 						</td>
 					</tr>
