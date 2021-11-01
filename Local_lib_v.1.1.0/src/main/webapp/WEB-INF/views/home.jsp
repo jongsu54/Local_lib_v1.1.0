@@ -156,7 +156,7 @@
 					<tr>
 						<td colspan="3">
 							E-Mail<br>
-							<input class="form-control" type="text" id="email" name="email" placeholder="Email을 입력해 주세요" size="50" onkeyup = "checkEm()" maxlength="50"/><br>
+							<input class="form-control" type="email" id="email" name="email" placeholder="Email을 입력해 주세요" size="50" onkeyup = "checkEm()" maxlength="50"/><br>
 							<span id ="chkMsg2"></span>
 						</td>
 						<!-- <td><button type="button" id="emailChkBtn" class="btn-primary btn-warning font-color-white" >E-mail 체크</button>
