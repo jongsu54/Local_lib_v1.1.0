@@ -70,7 +70,7 @@ $(function(){
 		$(".btn1").attr('class','btn btn-light');
 	}
 	*/
-	
+	//
 	//아이디확인버튼 (클릭시 아이디 보여주고 비밀번호찾기버튼 보여주기)
 	$("#userIdCheck").on("click", function(){
 	
