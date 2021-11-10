@@ -1,5 +1,7 @@
 package com.sbk.locallib.member.vo;
 
+import java.util.List;
+
 import lombok.Data;
 
 @Data
@@ -19,4 +21,6 @@ public class MemberVO {
    private int user_gb;
    private String join_date;
    private int state_gb;
+   
+   private List<AuthVO> authList;
 }
