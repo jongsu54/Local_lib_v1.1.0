@@ -34,6 +34,7 @@ $(function(){
 		$("#pw_returnPw").empty();
 		$("#pw_user_id").val("");
 		$("#pw_name").val("");
+		$("#pw_email").val("");
 		$("#pw_email1").val("");
 		$("#pw_email2").val("");
 		
@@ -50,6 +51,7 @@ $(function(){
 		$("#returnId").empty();
 		$("#returnPw").empty();
 		$("#name").val("");
+		$("#email").val("");
 		$("#email1").val("");
 		$("#email2").val("");
 		
@@ -70,7 +72,7 @@ $(function(){
 		$(".btn1").attr('class','btn btn-light');
 	}
 	*/
-	
+	//
 	//아이디확인버튼 (클릭시 아이디 보여주고 비밀번호찾기버튼 보여주기)
 	$("#userIdCheck").on("click", function(){
 	
@@ -103,13 +105,14 @@ $(function(){
 				console.log(e);
 				alert("입력된 정보가 없습니다. 다시 입력해 주세요");
 				$("#name").val("");
+				$("#email").val("");
 				$("#email1").val("");
 				$("#email2").val("");
 			}
 		});
 	});
 	
-	//아이디찾기 - 비밀번호 찾기버튼(hide)
+	//아이디찾기 - 비밀번호 확인버튼(hide)
 	$("#userPwCheck").on("click", function(){
 	
 		var name = $("#name").val();
@@ -147,6 +150,7 @@ $(function(){
 		$("#returnId").empty();
 		$("#returnPw").empty();
 		$("#name").val("");
+		$("#email").val("");
 		$("#email1").val("");
 		$("#email2").val("");
 		$("#email").find("option:eq(0)").prop("selected", true);
@@ -189,6 +193,12 @@ $(function(){
 			error : function(e){
 				console.log(e);
 				alert("입력된 정보가 없습니다. 다시 입력해 주세요");
+				$("#pw_user_id").val("");
+				$("#pw_name").val("");
+				$("#pw_email").val("");
+				$("#pw_email1").val("");
+				$("#pw_email2").val("");
+				
 			}
 		});
 	});
@@ -198,6 +208,7 @@ $(function(){
 		$("#pw_returnPw").empty();
 		$("#pw_user_id").val("");
 		$("#pw_name").val("");
+		$("#pw_email").val("");
 		$("#pw_email1").val("");
 		$("#pw_email2").val("");
 		$("#pw_email").find("option:eq(0)").prop("selected", true);
@@ -262,8 +273,17 @@ function formCheck1(){
 </head>
 <body>
 
+	<header class="p-3 mb-3 border-bottom   ">
+		<div class="container">
+			<div class=" row-vw d-flex justify-content-between   ">
+				<div onClick="location.href='/'" class="home">
+					<span class="logo fs-15 mx-auto fw-bold"><h3>Local Lib</h3></span>
+				</div>
+			</div>
+		</div>
+	</header>
 
-<div class="form-signin">
+	<div class="form-signin">
 	<h2 class="center logo fw=bold">회원정보 찾기</h2>
 	
 	<div class="center">
@@ -292,7 +312,7 @@ function formCheck1(){
 		<div id="returnPw"></div>
 		
 		<input type="reset" id="reEnter" value="재입력" class ="btn btn-warning font-color-white ">
-		<input type="button" id="userPwCheck" value="비밀번호 찾기" class ="btn btn-warning font-color-white ">
+		<input type="button" id="userPwCheck" value="비밀번호 확인" class ="btn btn-warning font-color-white ">
 	</div>
 	
 	<!-- <p>-------------------------------------------------<p><br><br> -->
@@ -319,7 +339,7 @@ function formCheck1(){
 		
 		<div id="pw_returnPw"></div>
 		
-		<input type="button" id="pw_userPwCheck" value="비밀번호 찾기" class="btn btn-warning font-color-white "><br><br>
+		<input type="button" id="pw_userPwCheck" value="비밀번호 확인" class="btn btn-warning font-color-white "><br><br>
 		<input type="reset" id="pw_reEnter" value="재입력" class="btn btn-warning font-color-white ">
 	</div>
 </div>	
